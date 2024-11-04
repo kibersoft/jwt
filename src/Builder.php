@@ -18,15 +18,11 @@ interface Builder
      * Appends new items to audience
      *
      * @param non-empty-string ...$audiences
-     *
-     * @pure
      */
     public function permittedFor(string ...$audiences): Builder;
 
     /**
      * Configures the expiration time
-     *
-     * @pure
      */
     public function expiresAt(DateTimeImmutable $expiration): Builder;
 
@@ -34,15 +30,11 @@ interface Builder
      * Configures the token id
      *
      * @param non-empty-string $id
-     *
-     * @pure
      */
     public function identifiedBy(string $id): Builder;
 
     /**
      * Configures the time that the token was issued
-     *
-     * @pure
      */
     public function issuedAt(DateTimeImmutable $issuedAt): Builder;
 
@@ -50,15 +42,11 @@ interface Builder
      * Configures the issuer
      *
      * @param non-empty-string $issuer
-     *
-     * @pure
      */
     public function issuedBy(string $issuer): Builder;
 
     /**
      * Configures the time before which the token cannot be accepted
-     *
-     * @pure
      */
     public function canOnlyBeUsedAfter(DateTimeImmutable $notBefore): Builder;
 
@@ -66,8 +54,6 @@ interface Builder
      * Configures the subject
      *
      * @param non-empty-string $subject
-     *
-     * @pure
      */
     public function relatedTo(string $subject): Builder;
 
@@ -75,8 +61,6 @@ interface Builder
      * Configures a header item
      *
      * @param non-empty-string $name
-     *
-     * @pure
      */
     public function withHeader(string $name, mixed $value): Builder;
 
@@ -86,8 +70,6 @@ interface Builder
      * @param non-empty-string $name
      *
      * @throws RegisteredClaimGiven When trying to set a registered claim.
-     *
-     * @pure
      */
     public function withClaim(string $name, mixed $value): Builder;
 
